@@ -63,11 +63,11 @@ const MainPage = () => {
         </div>
 
         <div className=" flex items-center justify-center md:justify-start gap-4">
-          <button className= " font-bold bg-blue-950 text-white px-10 py-3 rounded-full shadow hover:bg-amber-700 hover:text-blue-950 transition">
+          <button className= "  bg-blue-950 text-white px-10 py-3 rounded-full shadow hover:bg-amber-700 hover:text-blue-950 transition">
             Learn more
           </button>
 
-          <button className=" font-bold flex items-center gap-2 text-blue-950 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
+          <button className="  flex items-center gap-2 text-blue-950 px-6 py-3 rounded-lg hover:bg-blue-50 transition">
             Try it out{" "}
             <span className="text-orange-500 text-3xl mb-2 font-bold">
               {" "}
