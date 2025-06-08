@@ -49,7 +49,7 @@ const MainPage = () => {
 
 
       {/* Left Text Content */}
-      <div className="md:w-[800px] md:h-[700px] px-7  md:left-0   md:relative bg-white    md:rounded-r-full ">
+      <div className="md:w-[950px] md:h-[800px] px-7  md:left-0   md:relative bg-white    md:rounded-r-full ">
         <div  className="md:left-0 md:bottom-0 md:pt-[200px]" >
           <h1 className="md:text-4xl text-3xl font-bold text-gray-800 leading-snug mb-4">
             Interactive <span className="text-amber-500">online training</span>{" "}
