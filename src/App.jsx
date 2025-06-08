@@ -1,7 +1,6 @@
 
 
 import './index.css'
-import './app.css'
 import Navbar from './Pages/LandingPage/Navbar'
 import MainPage from './Pages/LandingPage/MainPage'
 import BrandSlider from './Pages/LandingPage/BrandSlider '
