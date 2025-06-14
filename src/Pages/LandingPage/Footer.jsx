@@ -9,7 +9,7 @@ const Footer = () => {
       <div className="flex flex-wrap gap-10 justify-between">
         <div className="max-w-md">
           <h4 className="text-xl font-bold mb-5">
-            Interactive online training for small and midsize fleets.
+            Now Searching Libreries on your hand
           </h4>
           <p className="pb-3">Get the mobile app</p>
           <div className="flex gap-3">
@@ -27,7 +27,6 @@ const Footer = () => {
             <Link to="/resources/company">Company</Link>
           </h5>
           <ul className="space-y-2">
-            <li><Link to="/resources/whats-new/media-kit">Media kit</Link></li>
             <li><Link to="/resources/company/careers">Careers</Link></li>
             <li><Link to="/resources/learn-more/getting-help">Support</Link></li>
             <li><Link to="/partners/become-a-partner">Become a partner</Link></li>
@@ -60,7 +59,7 @@ const Footer = () => {
       </div>
 
       <div className="mt-10 border-t pt-6 text-sm flex flex-wrap justify-between items-center">
-        <p>&copy; 2025 Cranial Expansion Learning Solutions, Inc.</p>
+        <p>&copy; 2025 Byteknot, Inc.</p>
 
 
         {/* <a href="#" className="block">

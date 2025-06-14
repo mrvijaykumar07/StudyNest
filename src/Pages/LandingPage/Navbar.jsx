@@ -1,158 +1,65 @@
 import React from "react";
 import { useState } from "react";
+import { Moon, Sun } from "lucide-react";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/comLogo.png";
-import CANADA from "../../assets/images/canada.png";
-import USA from "../../assets/images/usa.png";
+import { User } from "lucide-react";
 
 import MobileSideMenu from "./MobileSideMenu";
 import { HiX } from "react-icons/hi";
 
 const Navbar = () => {
   const [navOpen, setNavOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle("dark");
+  };
 
   return (
-    <header className="fixed top-0 left-0 w-full text-black bg-white text-lg shadow-md z-50 px-4 md:px-20">
-      <div className="container mx-auto flex items-center  justify-around py-1    ">
+    <header className="fixed w-full text-black bg-white text-lg shadow-md z-50 px-4 md:px-48 overflow-x-hidden ">
+      <div className="container  flex items-center  justify-between py-1   ">
         {/* Logo (Left Side) */}
         <Link to="/" className="text-2xl font-extrabold text-gray-900">
           <img src={logo} alt="LOGO" className="h-12 w-auto" />
         </Link>
 
-        <nav className="hidden   md:flex   gap-7 px-12 space-x-6 font-medium">
+{/* <nav className="hidden   md:flex   gap-7  space-x-6 font-medium"> */}
+<nav className="md:flex  hidden gap-7 text-sm font-semibold text-gray-700">
+  <Link to="/" className="hover:text-amber-700 transition">LIBRARIES</Link>
+  <Link to="/books" className="hover:text-amber-700 transition">BOOKS</Link>
+  <Link to="/courses" className="hover:text-amber-700 transition">COURSES</Link>
+  <Link to="/about" className="hover:text-amber-700 transition">CONTACT</Link>
+</nav>
+
+
+        <div className="hidden   md:flex   gap-7  space-x-6 font-medium">
           {/* Manual Navigation Items */}
-          <Link to="/whyonline" className="hover:text-blue-600 transition">
-            Why Online?
-          </Link>
 
-          <div className="relative group">
-            <Link to="/product" className="hover:text-blue-600 transition">
-              Product
-            </Link>
+     
 
-            {/* Dropdown Box with Arrow */}
-            <div className="absolute left-1/2 -translate-x-1/2 mt-6 hidden group-hover:block z-20">
-              {/* Arrow */}
-              <div className="w-3 h-3 bg-white rotate-45  mx-auto mb-[-6px]"></div>
-
-              {/* Box */}
-              <div className="bg-white shadow-lg rounded-md p-48 w-48 text-sm text-gray-700 z-60">
-                <Link
-                  to="/product/feature1"
-                  className="block hover:bg-gray-100 px-2 py-1 rounded"
-                >
-                  Links Here
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative group">
-            <Link to="/solutions" className="hover:text-blue-600 transition">
-              Solutions
-            </Link>
-
-            {/* Dropdown Box with Arrow */}
-            <div className="absolute left-1/2 -translate-x-1/2 mt-6 hidden group-hover:block z-20">
-              {/* Arrow */}
-              <div className="w-3 h-3 bg-white rotate-45  mx-auto mb-[-6px]"></div>
-
-              {/* Box */}
-              <div className="bg-white shadow-lg rounded-md p-48 w-48 text-sm text-gray-700 z-60">
-                <Link
-                  to="/product/feature1"
-                  className="block hover:bg-gray-100 px-2 py-1 rounded"
-                >
-                  Links Here
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <div className="relative group">
-            <Link to="/resources" className="hover:text-blue-600 transition">
-              Resources
-            </Link>
-
-            {/* Dropdown Box with Arrow */}
-            <div className="absolute left-1/2 -translate-x-1/2 mt-6 hidden group-hover:block z-20">
-              {/* Arrow */}
-              <div className="w-3 h-3 bg-white rotate-45  mx-auto mb-[-6px]"></div>
-
-              {/* Box */}
-              <div className="bg-white shadow-lg rounded-md p-48 w-48 text-sm text-gray-700 z-60">
-                <Link
-                  to="/product/feature1"
-                  className="block hover:bg-gray-100 px-2 py-1 rounded"
-                >
-                  Links Here
-                </Link>
-              </div>
-            </div>
-          </div>
-
+          <button
+            onClick={toggleTheme}
+            className="hover:text-blue-600 transition flex items-center gap-2"
+          >
+            {isDarkMode ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
           <Link
             to="/login"
             className="bg-blue-800 text-white px-6 py-1 rounded-full  hover:text-blue-950 hover:bg-amber-700    transition"
           >
             Login
           </Link>
-
-          <div className="relative group mt-1">
-            {/* Flag Image (Canada) */}
-            <img
-              src={CANADA}
-              alt="Canada"
-              className="h-6 w-auto cursor-pointer"
-            />
-
-            {/* Dropdown on hover */}
-            <div className="absolute left-1/2 -translate-x-1/2 mt-3 hidden group-hover:block z-20">
-              {/* Arrow */}
-              <div className="w-3 h-3 bg-white rotate-45 mx-auto mb-[-6px] "></div>
-
-              {/* Box with 2 Flags */}
-              <div className="bg-white shadow-lg rounded-md flex flex-col items-center justify-center w-14">
-                <Link
-                  to="/canada"
-                  className="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded"
-                >
-                  <img src={CANADA} alt="Canada" className="h-4 w-auto" />
-                </Link>
-                <Link
-                  to="/usa"
-                  className="flex items-center gap-2 hover:bg-gray-100 px-2 py-1 rounded"
-                >
-                  <img src={USA} alt="USA" className="h-4 w-auto" />
-                </Link>
-              </div>
-            </div>
-          </div>
-
-          <Link to="/resources" className="hover:text-blue-600 transition">
-            EN
-          </Link>
-        </nav>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="w-8 h-8 flex flex-col justify-between items-center md:hidden p-2  ml-16 border border-gray-300"
+          className="w-10 h-10 flex justify-center items-center md:hidden p-2 ml-16  border-gray-300"
           onClick={() => setNavOpen(!navOpen)}
           aria-label="Toggle menu"
         >
-          <span
-            className={`w-6 h-0.5 bg-gray-900 transition-transform ${
-              navOpen ? "rotate-45 translate-y-2" : ""
-            }`}
-          />
-          <span
-            className={`w-6 h-0.5 bg-gray-900 ${navOpen ? "hidden" : ""}`}
-          />
-          <span
-            className={`w-6 h-0.5 bg-gray-900 transition-transform ${
-              navOpen ? "-rotate-45 -translate-y-2" : ""
-            }`}
-          />
+          <User className="w-6 h-6 text-gray-900" />
         </button>
       </div>
 

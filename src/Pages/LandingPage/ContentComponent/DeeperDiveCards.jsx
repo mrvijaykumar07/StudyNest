@@ -1,38 +1,39 @@
 import React from "react";
-import trainingImage from "../../../assets/images/home/deeper-using-online-training.webp";
-import costCompareImage from "../../../assets/images/home/deeper-comparing-costs.webp";
+import onlinebooks from "../../../assets/images/home/onlinebooks.jpg";
+import physicalbooks from "../../../assets/images/home/physicalbooks.jpg";
 import saftyImage from "../../../assets/images/home/deeper-improve-safety.webp";
-import catalogImage from "../../../assets/images/home/deeper-explore-catalog.webp";
+import books from "../../../assets/images/home/books.jpg";
+
 
 const cardData = [
   {
-    title: "See how fleets are using online training today",
-    imgSrc: trainingImage,
-    link: "/solutions",
+    title: "Free books avialable ",
+    imgSrc:books,
+    link: "https://city-central-library-1088202356152.asia-south1.run.app/",
   },
   {
-    title: "Compare costs of online vs traditional training",
-    imgSrc: costCompareImage,
+    title: "Buy or Rent Physical books",
+    imgSrc:physicalbooks,
     link: "/onlinevsofflinetraining",
   },
   {
-    title: "Explore our growing course library",
+    title: "Explore our growing course ",
     imgSrc: saftyImage,
     link: "/resources",
   },
   {
-    title: "Learn how admins manage training easily",
-    imgSrc: catalogImage,
+    title: "Buy Online books",
+    imgSrc: onlinebooks,
     link: "/solutions",
   },
 ];
 
 const DeeperDiveCards = () => {
   return (
-    <section id="homeDeeperDive" className="py-16 bg-white">
+    <section id="homeDeeperDive" className="py-4 w-full md:px-24">
       <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-10 text-blue-900">
-          Take a deeper dive
+        <h2 className="md:text-2xl text-xl font-bold text-center mb-10 text-gray-700">
+          Explore Free Books, Courses & Library Services
         </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-7">
@@ -42,13 +43,13 @@ const DeeperDiveCards = () => {
                 <img
                   src={card.imgSrc}
                   alt={card.title}
-                  className="w-full h-40 object-cover"
+                  className="w-full h-40  bg-black"
                 />
               </a>
               <div className="flex flex-col justify-between p-4 flex-grow">
-                <p className="text-lg font-semibold text-gray-800 flex-grow">{card.title}</p>
+
                 <a href={card.link} className="text-blue-600 font-medium mt-2 hover:underline">
-                  Read more
+                 <p className=" font-semibold text-gray-800 flex-grow">{card.title}</p>
                 </a>
               </div>
             </div>
