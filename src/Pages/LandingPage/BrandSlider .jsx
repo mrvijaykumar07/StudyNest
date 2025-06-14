@@ -1,7 +1,3 @@
-
- 
-
-
 import React from "react";
 import logo from "../../assets/images/comLogo.png";
 
@@ -13,7 +9,8 @@ const BrandSlider = () => {
     <section id="homeLogoScroller" className="py-8 bg-gray-50 md:pt-20">
       <div className="text-center max-w-5xl mx-auto px-4">
         <p className="text-xl font-semibold mb-6 md:my-8 md:mx-6">
-          More than 2000 brands across North America rely on our services for their driver training
+          More than 2000 brands across North America rely on our services for
+          their driver training
         </p>
 
         <div className="overflow-hidden relative">
@@ -27,7 +24,11 @@ const BrandSlider = () => {
                 className="flex-shrink-0"
                 style={{ width: 160 }} // fixed width for each logo container
               >
-                <img src={logo} alt="Company Logo" className="w-full h-auto object-contain" />
+                <img
+                  src={logo}
+                  alt="Company Logo"
+                  className="w-full h-auto object-contain"
+                />
               </div>
             ))}
           </div>
@@ -46,4 +47,4 @@ const BrandSlider = () => {
   );
 };
 
-export default BrandSlider
+export default BrandSlider;

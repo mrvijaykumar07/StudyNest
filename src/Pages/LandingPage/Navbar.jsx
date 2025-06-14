@@ -25,19 +25,24 @@ const Navbar = () => {
           <img src={logo} alt="LOGO" className="h-12 w-auto" />
         </Link>
 
-{/* <nav className="hidden   md:flex   gap-7  space-x-6 font-medium"> */}
-<nav className="md:flex  hidden gap-7 text-sm font-semibold text-gray-700">
-  <Link to="/" className="hover:text-amber-700 transition">LIBRARIES</Link>
-  <Link to="/books" className="hover:text-amber-700 transition">BOOKS</Link>
-  <Link to="/courses" className="hover:text-amber-700 transition">COURSES</Link>
-  <Link to="/about" className="hover:text-amber-700 transition">CONTACT</Link>
-</nav>
-
+        {/* <nav className="hidden   md:flex   gap-7  space-x-6 font-medium"> */}
+        <nav className="md:flex  hidden gap-7 text-sm font-semibold text-gray-700">
+          <Link to="/" className="hover:text-amber-700 transition">
+            LIBRARIES
+          </Link>
+          <Link to="/books" className="hover:text-amber-700 transition">
+            BOOKS
+          </Link>
+          <Link to="/courses" className="hover:text-amber-700 transition">
+            COURSES
+          </Link>
+          <Link to="/about" className="hover:text-amber-700 transition">
+            CONTACT
+          </Link>
+        </nav>
 
         <div className="hidden   md:flex   gap-7  space-x-6 font-medium">
           {/* Manual Navigation Items */}
-
-     
 
           <button
             onClick={toggleTheme}

@@ -81,7 +81,7 @@ const UpdateSearchBox = ({ onSearchClick }) => {
                 <p className="text-sm text-gray-500">Duration</p>
               </div>
             </label>
-          </div>
+          </div>git commit -m "Initial commit"
         </div>
 
         <div className="flex justify-center hover:bg-amber-700">

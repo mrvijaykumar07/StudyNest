@@ -14,7 +14,7 @@ const FullCard2 = () => {
 
         <div className="w-full overflow-hidden">
           <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-2 gap-2">
-            {[L1, L2, L3, L4, L1,L2,L3,L4].map((src, index) => (
+            {[L1, L2, L3, L4, L1, L2, L3, L4].map((src, index) => (
               <img
                 key={index}
                 src={src}

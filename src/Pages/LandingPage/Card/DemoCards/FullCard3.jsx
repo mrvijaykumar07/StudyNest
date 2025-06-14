@@ -1,6 +1,5 @@
 import React from "react";
 import L1 from "../../../../assets/images/Libraries/6.jpg";
-
 import L2 from "../../../../assets/images/Libraries/7.jpg";
 import L3 from "../../../../assets/images/Libraries/1.jpg";
 import L4 from "../../../../assets/images/Libraries/4.jpg";
@@ -14,7 +13,7 @@ const FullCard3 = () => {
 
         <div className="w-full overflow-hidden">
           <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-2 gap-2">
-            {[L1, L2, L3, L4, L1,L2,L3,L4].map((src, index) => (
+            {[L1, L2, L3, L4, L1, L2, L3, L4].map((src, index) => (
               <img
                 key={index}
                 src={src}

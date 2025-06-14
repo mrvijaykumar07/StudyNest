@@ -32,42 +32,40 @@ const InfoCard = () => {
             </div>
 
             {/* Library Features */}
-<div className="flex flex-col gap-1 mt-2">
-  {/* Quiet Study Area */}
-  <div className="flex items-center gap-2">
-    <MdLibraryBooks className="w-6 h-6 text-blue-700" />
-    <span className="text-sm text-black">
-      Quiet Study Area
-      <span className="hidden md:inline">  Individual Seating</span>
-    </span>
-  </div>
+            <div className="flex flex-col gap-1 mt-2">
+              {/* Quiet Study Area */}
+              <div className="flex items-center gap-2">
+                <MdLibraryBooks className="w-6 h-6 text-blue-700" />
+                <span className="text-sm text-black">
+                  Quiet Study Area
+                  <span className="hidden md:inline"> Individual Seating</span>
+                </span>
+              </div>
 
-  {/* Free Wi-Fi */}
-  <div className="flex items-center gap-2">
-    <MdWifi className="w-6 h-6 text-gray-700" />
-    <span className="text-sm text-gray-700">
-      Free Wi-Fi Available
-      
-    </span>
-  </div>
+              {/* Free Wi-Fi */}
+              <div className="flex items-center gap-2">
+                <MdWifi className="w-6 h-6 text-gray-700" />
+                <span className="text-sm text-gray-700">
+                  Free Wi-Fi Available
+                </span>
+              </div>
 
-  {/* AC & Power Backup */}
-  <div className="flex items-center gap-2">
-    <MdBolt className="w-6 h-6 text-yellow-600" />
-    <span className="text-sm text-gray-700">
-      AC & Power Backup
-      <span className="hidden md:inline"> for All Study Hours</span>
-    </span>
-  </div>
+              {/* AC & Power Backup */}
+              <div className="flex items-center gap-2">
+                <MdBolt className="w-6 h-6 text-yellow-600" />
+                <span className="text-sm text-gray-700">
+                  AC & Power Backup
+                  <span className="hidden md:inline"> for All Study Hours</span>
+                </span>
+              </div>
 
-  {/* Open Hours - Only Desktop */}
-  <div className="hidden md:flex items-center gap-2">
-    <span className="px-1 text-sm text-blue-600">
-      Open 7AM - 10PM  
-    </span>
-  </div>
-</div>
-
+              {/* Open Hours - Only Desktop */}
+              <div className="hidden md:flex items-center gap-2">
+                <span className="px-1 text-sm text-blue-600">
+                  Open 7AM - 10PM
+                </span>
+              </div>
+            </div>
           </div>
 
           {/* Right Side - 40% */}
@@ -79,7 +77,6 @@ const InfoCard = () => {
               <span className="inline-flex items-center gap-1 px-2 py-1 ">
                 🔒 Secure Payment
               </span>
-        
             </div>
 
             <div className="inline-flex items-center px-3 py-1 border border-amber-700 text-amber-600 rounded-xl  hover:bg-amber-600 hover:text-white">
