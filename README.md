@@ -7,23 +7,7 @@
  
  
  
- 
- 
- <div className="flex flex-col rounded-2xl  overflow-hidden md:w-2xl">
-      {/* Left Image Gallery */}
 
-<div className="w-full overflow-hidden">
-  <div className="flex overflow-x-auto snap-x snap-mandatory scrollbar-hide px-2 gap-2">
-    {[L1, L2, L1, L2, L1].map((src, index) => (
-      <img
-        key={index}
-        src={src}
-        alt={`Image ${index + 1}`}
-        className="min-w-[90%] h-52 object-cover flex-shrink-0 snap-start rounded-lg"
-      />
-    ))}
-  </div>
-</div>
 
 
 

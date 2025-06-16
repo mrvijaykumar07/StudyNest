@@ -1,12 +1,19 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useNavigate } from "react-router-dom";
+import { AppContext } from "../../../context/AppContext"; // adjust the path as needed
 
 const MobilePageHeader = ({ onEditClick }) => {
-  const navigate = useNavigate(); // ✅ Initialize navigate here
+  const navigate = useNavigate();
+  const { selectedDate, selectedMonths, areaName } = useContext(AppContext);
 
   const handleBack = () => {
-    navigate("/"); // ✅ Now this works
+    navigate("/");
   };
+
+  const formattedDate = new Date(selectedDate).toLocaleDateString("en-IN", {
+    day: "2-digit",
+    month: "short",
+  });
 
   return (
     <div id="PageHeader" className="w-full px-4 pt-3 mt-8 md:px-36">
@@ -15,7 +22,7 @@ const MobilePageHeader = ({ onEditClick }) => {
           {/* Back Button */}
           <button
             className="p-2 rounded-full hover:bg-gray-200"
-            onClick={handleBack} // ✅ Move click handler to button
+            onClick={handleBack}
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -31,9 +38,12 @@ const MobilePageHeader = ({ onEditClick }) => {
 
           {/* Title & SubHeader */}
           <div>
-            <p className="text-lg font-semibold text-gray-900">Bhubaneshwar</p>
+            <p className="text-lg font-semibold text-gray-900">
+              {areaName || "Select Area"}
+            </p>
             <p className="text-sm text-gray-600">
-              from 14 June, 3 months &nbsp;
+              from {formattedDate}, {selectedMonths}{" "}
+              {selectedMonths === "1" ? "month" : "months"} &nbsp;
               <span
                 className="text-blue-600 font-medium cursor-pointer hover:underline"
                 onClick={onEditClick}
